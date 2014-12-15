@@ -295,6 +295,7 @@ config CPU_FREQ_GOV_BLU_ACTIVE
 
 	  If in doubt, say N.
 
+<<<<<<< HEAD
 config CPU_FREQ_GOV_IMPULSE
 	tristate "'impulse' cpufreq policy governor"
 	help
@@ -303,6 +304,8 @@ config CPU_FREQ_GOV_IMPULSE
 
 	  If in doubt, say N.
 
+=======
+>>>>>>> d5736fb... blu_active: dynamic cpufreq policy governor designed for latency-sens…
 comment "CPU frequency scaling drivers"
 
 config CPUFREQ_DT
