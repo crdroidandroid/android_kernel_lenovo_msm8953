@@ -334,6 +334,10 @@ static void msm_restart_prepare(const char *cmd)
     pr_crit("msm_restart_prepare need_warm_reset=%d\n",need_warm_reset);
     /*lenovo-sw jixj2015.3.13 add begin*/
 
+#ifdef CONFIG_MSM_PRESERVE_MEM
+	need_warm_reset = true;
+#endif
+
 	/* Hard reset the PMIC unless memory contents must be maintained. */
 	if (need_warm_reset) {
 		qpnp_pon_system_pwr_off(PON_POWER_OFF_WARM_RESET);
