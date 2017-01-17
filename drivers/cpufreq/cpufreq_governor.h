@@ -186,6 +186,40 @@ struct cs_dbs_tuners {
 	unsigned int up_threshold;
 	unsigned int down_threshold;
 	unsigned int freq_step;
+	unsigned int boost_ceiling;
+};
+
+struct ac_dbs_tuners {
+	unsigned int ignore_nice_load;
+	unsigned int sampling_rate;
+	int inc_cpu_load_at_min_freq;
+	int inc_cpu_load;
+	int dec_cpu_load_at_min_freq;
+	int dec_cpu_load;
+	int freq_responsiveness;
+	unsigned int cpus_up_rate;
+	unsigned int cpus_down_rate;
+};
+
+struct dk_dbs_tuners {
+	unsigned int ignore_nice_load;
+	unsigned int sampling_rate;
+};
+
+struct nm_dbs_tuners {
+	unsigned int ignore_nice_load;
+	unsigned int sampling_rate;
+	int inc_cpu_load_at_min_freq;
+	int inc_cpu_load;
+	int dec_cpu_load;
+	int freq_for_responsiveness;
+	int freq_for_responsiveness_max;
+	int freq_up_brake_at_min_freq;
+	int freq_up_brake;
+	int freq_step_at_min_freq;
+	int freq_step;
+	int freq_step_dec;
+	int freq_step_dec_at_max_freq;
 };
 
 /* Common Governor data across policies */
