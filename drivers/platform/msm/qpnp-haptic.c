@@ -1472,7 +1472,7 @@ static ssize_t qpnp_hap_vmax_mv_show(struct device *dev,
  	return snprintf(buf, PAGE_SIZE, "%d\n", hap->vmax_mv);
 }
 
- static ssize_t qpnp_hap_vmax_mv_store(struct device *dev,
+static ssize_t qpnp_hap_vmax_mv_store(struct device *dev,
 		struct device_attribute *attr, const char *buf, size_t count)
 {
 	struct timed_output_dev *timed_dev = dev_get_drvdata(dev);
